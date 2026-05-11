@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Book Registration</h2>
+    <form>
+      <label for="title">Book Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="isbn">ISBN</label>
+      <input type="text" id="isbn" name="isbn" required>
+
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre">
+        <option value="fiction">Fiction</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="education">Education</option>
+        <option value="science">Science</option>
+      </select>
+
+      <label for="published">Publication Date</label>
+      <input type="date" id="published" name="published">
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="3"></textarea>
+
+      <button type="submit">Register Book</button>
+    </form>
+  </div>
+</body>
+</html>
