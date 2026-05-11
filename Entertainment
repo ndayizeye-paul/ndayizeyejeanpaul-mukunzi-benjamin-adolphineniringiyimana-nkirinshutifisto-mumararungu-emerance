@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entertainment Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 420px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #28a745;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Entertainment Registration</h2>
+    <form>
+      <label for="name">Event Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="type">Entertainment Type</label>
+      <select id="type" name="type">
+        <option value="music">Music</option>
+        <option value="movie">Movie</option>
+        <option value="comedy">Comedy</option>
+        <option value="sports">Sports</option>
+        <option value="theater">Theater</option>
+      </select>
+
+      <label for="organizer">Organizer</label>
+      <input type="text" id="organizer" name="organizer">
+
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date">
+
+      <label for="time">Event Time</label>
+      <input type="time" id="time" name="time">
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location">
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="3"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
