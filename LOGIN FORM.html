@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#4facfe,#00f2fe);
+    }
+
+    .container{
+      width:350px;
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .container h2{
+      text-align:center;
+      margin-bottom:25px;
+      color:#333;
+    }
+
+    .input-box{
+      margin-bottom:20px;
+    }
+
+    .input-box label{
+      display:block;
+      margin-bottom:8px;
+      color:#555;
+      font-size:14px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      outline:none;
+      transition:0.3s;
+    }
+
+    .input-box input:focus{
+      border-color:#4facfe;
+      box-shadow:0 0 5px rgba(79,172,254,0.5);
+    }
+
+    .remember{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px;
+      font-size:14px;
+    }
+
+    .remember a{
+      text-decoration:none;
+      color:#4facfe;
+    }
+
+    .remember a:hover{
+      text-decoration:underline;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:#4facfe;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#00c6fb;
+    }
+
+    .register{
+      text-align:center;
+      margin-top:20px;
+      font-size:14px;
+    }
+
+    .register a{
+      color:#4facfe;
+      text-decoration:none;
+    }
+
+    .register a:hover{
+      text-decoration:underline;
+    }
+
+    .message{
+      margin-top:15px;
+      text-align:center;
+      font-size:14px;
+      color:red;
+    }
+
+    .success{
+      color:green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <div class="remember">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <div id="message" class="message"></div>
+
+      <div class="register">
+        Don't have an account?
+        <a href="#">Register</a>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+
+    loginForm.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Example login validation
+      if(email === "admin@gmail.com" && password === "12345"){
+        message.textContent = "Login successful!";
+        message.classList.add("success");
+
+        // Redirect example
+        // window.location.href = "dashboard.html";
+      }else{
+        message.textContent = "Invalid email or password!";
+        message.classList.remove("success");
+      }
+    });
+  </script>
+
+</body>
+</html>
